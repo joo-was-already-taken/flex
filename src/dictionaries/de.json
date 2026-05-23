@@ -1,0 +1,37 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "projects": "Projekte",
+    "contact": "Kontakt"
+  },
+  "about": {
+    "title": "Hallo Welt!",
+    "description": "Ich bin ein Informatikstudent an der Technischen Universität Warschau.",
+    "interests": "Meine Interessen sind DevOps, Systemwerkzeuge und Betriebssystemdesign."
+  },
+  "projects": {
+    "view_source": "Quellcode ansehen →",
+    "items": {
+      "nix-from-zon": {
+        "title": "nix-from-zon",
+        "description": "Eine Nix-Bibliothek, die Zig Object Notation (ZON) in native Nix-Datenstrukturen parst."
+      },
+      "nixos-config": {
+        "title": "NixOS Config",
+        "description": "Eine NixOS-Konfiguration, die ich seit etwa 20 Monaten auf meinem Laptop verwende."
+      },
+      "flex": {
+        "title": "Diese Website",
+        "description": "Eine statische Website mit einigen Informationen über mich."
+      },
+      "neovim-penultimum": {
+        "title": "Neovim Config",
+        "description": "Meine persönliche Neovim-Konfiguration mit einem Home Manager-Modul."
+      }
+    }
+  },
+  "contact": {
+    "title": "Lass uns verbinden",
+    "description": "Zögern Sie nicht, mich per E-Mail zu kontaktieren."
+  }
+}

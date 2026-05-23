@@ -1,0 +1,37 @@
+{
+  "nav": {
+    "home": "tomo",
+    "projects": "pali",
+    "contact": "toki"
+  },
+  "about": {
+    "title": "toki ma!",
+    "description": "mi jan kama sona pi ilo sona lon tomo sona suli pi ma Wasa.",
+    "interests": "mi olin e pali DevOps, e ilo tenpo, e nasin pi ilo sona mama."
+  },
+  "projects": {
+    "view_source": "lukin e nasin ilo →",
+    "items": {
+      "nix-from-zon": {
+        "title": "nix-from-zon",
+        "description": "ilo Nix li ante e sitelen ZON tawa sitelen Nix."
+      },
+      "nixos-config": {
+        "title": "nasin NixOS",
+        "description": "nasin NixOS mi pi tenpo sike tu."
+      },
+      "flex": {
+        "title": "lipu ni",
+        "description": "lipu awen pi sona mi."
+      },
+      "neovim-penultimum": {
+        "title": "nasin Neovim",
+        "description": "nasin Neovim mi kepeken ilo Home Manager."
+      }
+    }
+  },
+  "contact": {
+    "title": "o toki tawa mi",
+    "description": "o pana e lipu tenpo tawa mi."
+  }
+}

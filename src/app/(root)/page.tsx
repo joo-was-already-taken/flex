@@ -1,0 +1,24 @@
+'use client'
+
+import { useEffect } from 'react'
+import { useRouter } from 'next/navigation'
+
+export default function RootRedirect() {
+  const router = useRouter()
+
+  useEffect(() => {
+    const browserLang = navigator.language.toLowerCase()
+
+    let preferredLang = 'en'
+    if (browserLang.startsWith('pl')) preferredLang = 'pl'
+    else if (browserLang.startsWith('de')) preferredLang = 'de'
+
+    router.replace(`/${preferredLang}/home`)
+  }, [router])
+
+  return (
+    <div style={{ height: '100vh', backgroundColor: '#000' }}>
+      {/* black screen while redirecting */}
+    </div>
+  )
+}

@@ -5,7 +5,7 @@ import { ReactNode, useState, useRef, useContext } from 'react'
 import { AnimatePresence, motion, Variants } from 'framer-motion'
 import { LayoutRouterContext } from 'next/dist/shared/lib/app-router-context.shared-runtime'
 
-const ROUTES = ['/home', '/about', '/projects', '/contact']
+const ROUTES = ['/home', '/projects', '/contact']
 
 function FrozenRouter(props: { children: ReactNode }) {
   const context = useContext(LayoutRouterContext ?? {})
@@ -22,19 +22,21 @@ function FrozenRouter(props: { children: ReactNode }) {
 
 export default function PageTransition({ children }: { children: ReactNode }) {
   const pathname = usePathname()
+  // remove /[lang] prefix
+  const normalizedPath = pathname.replace(/^\/[^/]+/, '')
 
   const [state, setState] = useState({
-    prevPath: pathname,
+    prevPath: normalizedPath,
     direction: 0,
   })
 
   // derived state to calculate direction synchronously before render finishes
-  if (pathname !== state.prevPath) {
-    const curIndex = ROUTES.indexOf(pathname)
+  if (normalizedPath !== state.prevPath) {
+    const curIndex = ROUTES.indexOf(normalizedPath)
     const prevIndex = ROUTES.indexOf(state.prevPath)
     const newDirection = curIndex > prevIndex ? 1 : -1
     setState({
-      prevPath: pathname,
+      prevPath: normalizedPath,
       direction: newDirection,
     })
   }

@@ -1,0 +1,37 @@
+{
+  "nav": {
+    "home": "Strona główna",
+    "projects": "Projekty",
+    "contact": "Kontakt"
+  },
+  "about": {
+    "title": "Witaj Świecie!",
+    "description": "Jestem studentem Informatyki na Politechnice Warszawskiej.",
+    "interests": "Interesuję się DevOps, narzędziami systemowymi i projektowaniem systemów operacyjnych."
+  },
+  "projects": {
+    "view_source": "Zobacz kod źródłowy →",
+    "items": {
+      "nix-from-zon": {
+        "title": "nix-from-zon",
+        "description": "Biblioteka do Nix-a parsująca Zig Object Notation (ZON) do natywnych struktur danych dostępnych w Nix-ie."
+      },
+      "nixos-config": {
+        "title": "Konfiguracja NixOS-a",
+        "description": "Konfiguracja NixOS-a, której używałem na moim laptopie przez około 20 miesięcy."
+      },
+      "flex": {
+        "title": "Ta Strona",
+        "description": "Statyczna strona z informacjami o mnie."
+      },
+      "neovim-penultimum": {
+        "title": "Konfiguracja Neovima",
+        "description": "Moja osobista konfiguracja Neovima z modułem Home Manager-a."
+      }
+    }
+  },
+  "contact": {
+    "title": "Bądźmy w kontakcie",
+    "description": "Napisz pisz do mnie maila."
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "about": {
+    "title": "Hello, World!",
+    "description": "I am a Computer Science student pursuing a Bachelor's degree at the Warsaw University of Technology.",
+    "interests": "My interests are DevOps, system tools and OS design."
+  },
+  "projects": {
+    "view_source": "View source code →",
+    "items": {
+      "nix-from-zon": {
+        "title": "nix-from-zon",
+        "description": "A Nix library that parses Zig Object Notation (ZON) into native Nix data structures."
+      },
+      "nixos-config": {
+        "title": "NixOS Config",
+        "description": "A NixOS configuration I've been using on my laptop for about 20 months."
+      },
+      "flex": {
+        "title": "This Website",
+        "description": "A static site with some info about me."
+      },
+      "neovim-penultimum": {
+        "title": "Neovim Config",
+        "description": "My personal Neovim configuration with a Home Manager module."
+      }
+    }
+  },
+  "contact": {
+    "title": "Let's connect",
+    "description": "Feel free to reach out to me via email."
+  }
+}
