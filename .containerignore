@@ -1,0 +1,13 @@
+.next
+node_modules
+out
+.git
+.gitignore
+*.md
+pnpm-lock.yaml
+Containerfile
+.prettierrc
+.prettierignore
+eslint.config.mjs
+tsconfig.json
+next.config.ts

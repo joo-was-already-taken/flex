@@ -1,0 +1,14 @@
+.container {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.greeting {
+  padding: 1.5rem;
+}

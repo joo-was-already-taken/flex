@@ -1,0 +1,34 @@
+[
+  {
+    "id": "nix-from-zon",
+    "title": "nix-from-zon",
+    "techNames": ["Nix"],
+    "techSlugs": ["nixos"],
+    "description": "A Nix library that parses Zig Object Notation (ZON) into native Nix data structures.",
+    "link": "https://github.com/joo-was-already-taken/nix-from-zon"
+  },
+  {
+    "id": "nixos-config",
+    "title": "NixOS Config",
+    "techNames": ["NixOS", "Home Manager", "Lua", "Bash"],
+    "techSlugs": ["nixos", "nixos", "lua", "bash"],
+    "description": "A NixOS configuration I've been using on my laptop for about 20 months.",
+    "link": "https://github.com/joo-was-already-taken/nixos-config"
+  },
+  {
+    "id": "flex",
+    "title": "This Website",
+    "techNames": ["Next.js", "WebGL", "Sass"],
+    "techSlugs": ["nextjs", "webgl", "sass"],
+    "description": "A static site with some info about me.",
+    "link": "https://github.com/joo-was-already-taken/flex"
+  },
+  {
+    "id": "neovim-penultimum",
+    "title": "Neovim Config",
+    "techNames": ["Lua", "Nix"],
+    "techSlugs": ["lua", "nixos"],
+    "description": "My personal Neovim configuration with a Home Manager module.",
+    "link": "https://github.com/joo-was-already-taken/neovim-penultimum"
+  }
+]

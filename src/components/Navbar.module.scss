@@ -1,0 +1,61 @@
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  pointer-events: auto;
+  background-color: transparent;
+
+  .navLinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    a {
+      color: rgb(var(--foreground-rgb));
+      text-decoration: none;
+      font-size: 1rem;
+      position: relative;
+      padding: 0.5rem 1rem;
+      transition: opacity 0.2s ease;
+
+      /* background glow for hovered tab */
+      &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: radial-gradient(
+          circle at center,
+          rgba(255, 255, 255, 0.4) 0%,
+          rgba(255, 255, 255, 0.05) 40%,
+          transparent 70%
+        );
+        border-radius: 50%;
+        opacity: 0;
+        transform: scale(0.8);
+        transition:
+          opacity 0.3s ease,
+          transform 0.3s ease;
+      }
+
+      &:hover {
+        opacity: 1;
+        &::before {
+          opacity: 1;
+          transform: scale(1.2);
+        }
+      }
+    }
+
+    .active {
+      border-bottom: 1px solid currentColor;
+    }
+  }
+}
