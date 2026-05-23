@@ -13,7 +13,8 @@ export default function StarBackground() {
   })
 
   useEffect(() => {
-    fetch('/stars.json')
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
+    fetch(`${basePath}/stars.json`)
       .then((res) => res.json())
       .then((data: Star[]) => setStars(data))
       .catch((err) => console.error('Failed to load stars:', err))
