@@ -10,6 +10,7 @@
     "interests": "My interests are DevOps, system tools and OS design."
   },
   "projects": {
+    "description": "Here are a few of my projects I've been developing in my free time.",
     "view_source": "View source code →",
     "items": {
       "pomidoro": {

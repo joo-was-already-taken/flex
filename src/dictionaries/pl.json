@@ -10,6 +10,7 @@
     "interests": "Interesuję się DevOps, narzędziami systemowymi i projektowaniem systemów operacyjnych."
   },
   "projects": {
+    "description": "Oto kilka moich projektów, które tworzyłem w wolnym czasie.",
     "view_source": "Zobacz kod źródłowy →",
     "items": {
       "pomidoro": {

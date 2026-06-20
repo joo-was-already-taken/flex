@@ -9,6 +9,7 @@ export default async function ProjectsPage({ params }: { params: Promise<{ lang:
 
   return (
     <main className={styles.container}>
+      <p className={styles.generalDescription}>{dict.projects.description}</p>
       {projectsData.map((project) => {
         const itemDict = dict.projects.items[project.id as keyof typeof dict.projects.items]
         const title = itemDict?.title || project.title
