@@ -34,6 +34,7 @@ export default [
         { ignore: ['attach', 'args', 'uPixelRatio', 'rotation', 'position', 'camera'] },
       ],
       '@typescript-eslint/no-unused-vars': 'off',
+      '@next/next/no-img-element': 'off',
     },
   },
 ]

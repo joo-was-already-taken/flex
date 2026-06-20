@@ -11,6 +11,7 @@ export type Locale = keyof typeof dictionaries
 
 type Dictionary = Awaited<ReturnType<typeof dictionaries.en>>
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function deepMerge(target: any, source: any): any {
   if (typeof target !== 'object' || target === null) return source
   if (typeof source !== 'object' || source === null) return target
