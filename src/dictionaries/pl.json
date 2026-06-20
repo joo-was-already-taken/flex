@@ -1,4 +1,7 @@
 {
+  "meta": {
+    "title": "Witaj Świecie!"
+  },
   "nav": {
     "home": "Strona główna",
     "projects": "Projekty",

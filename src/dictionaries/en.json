@@ -1,4 +1,7 @@
 {
+  "meta": {
+    "title": "Hello, World!"
+  },
   "nav": {
     "home": "Home",
     "projects": "Projects",

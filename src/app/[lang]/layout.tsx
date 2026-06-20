@@ -4,6 +4,7 @@ import StarBackground from '../../components/StarBackground'
 import PageTransition from '../../components/PageTransition'
 import '../global.scss'
 import { getDictionary, Locale } from '../../get-dictionary'
+import type { Metadata } from 'next'
 
 const primaryFont = localFont({
   src: [
@@ -20,6 +21,19 @@ const primaryFont = localFont({
   ],
   variable: '--font-primary',
 })
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>
+}): Promise<Metadata> {
+  const { lang } = await params
+  const dict = await getDictionary(lang as Locale)
+
+  return {
+    title: dict.meta.title,
+  }
+}
 
 export async function generateStaticParams() {
   return [{ lang: 'en' }, { lang: 'pl' }, { lang: 'de' }, { lang: 'tok' }]
