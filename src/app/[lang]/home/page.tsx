@@ -1,5 +1,7 @@
 import styles from '../page.module.scss'
 import Glass from '../../../components/Glass'
+import IconButton from '../../../components/IconButton'
+import socials from '../../../data/socials.json'
 import { getDictionary, Locale } from '../../../get-dictionary'
 
 export default async function HomePage({ params }: { params: Promise<{ lang: string }> }) {
@@ -16,6 +18,10 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
           {dict.about.interests}
         </p>
       </Glass>
+      <div className={styles.socialLinks}>
+        <IconButton href={socials.github} icon="github.svg" label="GitHub" />
+        <IconButton href={socials.linkedin} icon="linkedin.png" label="LinkedIn" />
+      </div>
     </main>
   )
 }
