@@ -1,5 +1,13 @@
 [
   {
+    "id": "pomidoro",
+    "title": "Pomidoro",
+    "techNames": ["Rust", "Nix"],
+    "techSlugs": ["rust", "nixos"],
+    "description": "An extensible pomodoro timer with client-server architecture.",
+    "link": "https://github.com/joo-was-already-taken/pomidoro"
+  },
+  {
     "id": "nix-from-zon",
     "title": "nix-from-zon",
     "techNames": ["Nix"],

@@ -12,6 +12,10 @@
   "projects": {
     "view_source": "Quellcode ansehen →",
     "items": {
+      "pomidoro": {
+        "title": "Pomidoro",
+        "description": "Ein erweiterbarer Pomodoro-Timer mit Client-Server-Architektur."
+      },
       "nix-from-zon": {
         "title": "nix-from-zon",
         "description": "Eine Nix-Bibliothek, die Zig Object Notation (ZON) in native Nix-Datenstrukturen parst."
