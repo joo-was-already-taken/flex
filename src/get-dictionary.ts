@@ -9,7 +9,34 @@ const dictionaries = {
 
 export type Locale = keyof typeof dictionaries
 
-export const getDictionary = async (locale: Locale) => {
-  const loadDictionary = dictionaries[locale] ?? dictionaries.en
-  return loadDictionary()
+type Dictionary = Awaited<ReturnType<typeof dictionaries.en>>
+
+function deepMerge(target: any, source: any): any {
+  if (typeof target !== 'object' || target === null) return source
+  if (typeof source !== 'object' || source === null) return target
+
+  const output = { ...target }
+  for (const key of Object.keys(source)) {
+    if (typeof source[key] === 'object' && source[key] !== null && !Array.isArray(source[key])) {
+      if (key in target) {
+        output[key] = deepMerge(target[key], source[key])
+      } else {
+        output[key] = source[key]
+      }
+    } else {
+      output[key] = source[key]
+    }
+  }
+  return output
+}
+
+export const getDictionary = async (locale: Locale): Promise<Dictionary> => {
+  const baseDict = await dictionaries.en()
+  if (locale === 'en') return baseDict
+
+  const loadDictionary = dictionaries[locale]
+  if (!loadDictionary) return baseDict
+
+  const targetDict = await loadDictionary()
+  return deepMerge(baseDict, targetDict) as Dictionary
 }
