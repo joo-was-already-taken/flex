@@ -12,7 +12,7 @@ export default async function ProjectsPage({ params }: { params: Promise<{ lang:
       {projectsData.map((project) => {
         const itemDict = dict.projects.items[project.id as keyof typeof dict.projects.items]
         const title = itemDict?.title || project.title
-        const description = itemDict?.description || project.description
+        const description = itemDict?.description
 
         return (
           <Glass key={project.id} className={styles.projectCard}>
