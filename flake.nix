@@ -10,7 +10,7 @@
       perSystem = { pkgs, ... }: {
         devShells.default = pkgs.mkShell {
           buildInputs = with pkgs; [
-            nodejs-slim_25
+            nodejs-slim_26
             pnpm
             typescript-language-server
           ];
