@@ -73,7 +73,7 @@
     margin-left: auto;
 
     button {
-      @include hover-glow(2.0);
+      @include hover-glow(2);
       background: none;
       border: none;
       color: rgba(var(--foreground-rgb), 0.6);
