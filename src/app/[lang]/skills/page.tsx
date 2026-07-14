@@ -14,6 +14,7 @@ export default async function SkillsPage({ params }: { params: Promise<{ lang: s
           type SkillItem = { usedFor?: string; usage?: string | string[] }
           const itemsDict = (dict.skills as { items: Record<string, SkillItem> }).items
           const itemDict = itemsDict[skill.slug] || {}
+          const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
           return (
             <Glass key={idx} className={styles.skillsCard}>
@@ -21,7 +22,7 @@ export default async function SkillsPage({ params }: { params: Promise<{ lang: s
                 <div className={styles.titleContainer}>
                   {skill.slug && (
                     <img
-                      src={`/icons/tech/${skill.slug}.svg`}
+                      src={`${basePath}/icons/tech/${skill.slug}.svg`}
                       alt={`${skill.name} icon`}
                       className={styles.techIcon}
                     />
