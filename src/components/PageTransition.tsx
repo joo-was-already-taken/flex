@@ -5,7 +5,7 @@ import { ReactNode, useState, useRef, useContext } from 'react'
 import { AnimatePresence, motion, Variants } from 'framer-motion'
 import { LayoutRouterContext } from 'next/dist/shared/lib/app-router-context.shared-runtime'
 
-const ROUTES = ['/home', '/projects', '/contact']
+const ROUTES = ['/home', '/projects', '/skills', '/contact']
 
 function FrozenRouter(props: { children: ReactNode }) {
   const context = useContext(LayoutRouterContext ?? {})

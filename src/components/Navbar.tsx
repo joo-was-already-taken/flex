@@ -27,6 +27,7 @@ export default function Navbar({
     nav: {
       home: string
       projects: string
+      skills: string
       contact: string
     }
   }
@@ -80,6 +81,9 @@ export default function Navbar({
         </NavbarLink>
         <NavbarLink href={`/${lang}/projects`} curPath={pathname}>
           {dict.nav.projects}
+        </NavbarLink>
+        <NavbarLink href={`/${lang}/skills`} curPath={pathname}>
+          {dict.nav.skills}
         </NavbarLink>
         <NavbarLink href={`/${lang}/contact`} curPath={pathname}>
           {dict.nav.contact}

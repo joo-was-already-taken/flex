@@ -5,6 +5,7 @@
   "nav": {
     "home": "Home",
     "projects": "Projects",
+    "skills": "Skills",
     "contact": "Contact"
   },
   "about": {
@@ -35,6 +36,84 @@
       "neovim-penultimum": {
         "title": "Neovim Config",
         "description": "My personal Neovim configuration with a Home Manager module."
+      }
+    }
+  },
+  "skills": {
+    "title": "Skills",
+    "items": {
+      "linux": {
+        "usedFor": "5 years",
+        "usage": [
+          "Daily-driving for 5 years: Linux Mint -> Manjaro -> NixOS",
+          "Development: Alpine for containerization, Arch in Distrobox for a quick development shell",
+          "University: Ubuntu Server, Alpine, OpenWrt, Buildroot",
+          "Personal devices: local Raspberry Pi server (NixOS) and PC (Bazzite)"
+        ]
+      },
+      "python": {
+        "usedFor": "7 years",
+        "usage": [
+          "From Turtle graphics through automation scripting to Django applications and AI microservices"
+        ]
+      },
+      "nixos": {
+        "usedFor": "2.5 years",
+        "usage": [
+          "NixOS with Home Manager as a daily driver for 2 years",
+          "Flakes for development shells and building packages"
+        ]
+      },
+      "bash": {
+        "usedFor": "4 years",
+        "usage": [
+          "Scripts",
+          "Automation",
+          "User and development shell (also Zsh)",
+          "General tasks, like renaming files using a pattern or quick arithmetics"
+        ]
+      },
+      "javascript": {
+        "usedFor": "2 years",
+        "usage": [
+          "Frameworks: Next.js, React",
+          "Languages: TypeScript, JavaScript, HTML, SCSS, Tailwind CSS",
+          "Visuals: WebGL, Framer Motion",
+          "Tooling: pnpm, ESLint"
+        ]
+      },
+      "spring": {
+        "usedFor": "1.5 year",
+        "usage": [
+          "Backend REST APIs for university projects",
+          "Object-Oriented Programming",
+          "Database integrations"
+        ]
+      },
+      "rust": {
+        "usedFor": "3 years",
+        "usage": [
+          "Extensible local tools (e.g. Pomidoro)",
+          "Utilizing Tokio for asynchronous runtime",
+          "Data parsing and serialization using Serde"
+        ]
+      },
+      "docker": {
+        "usedFor": "2.5 years",
+        "usage": [
+          "Container orchestration and virtualization with Kubernetes and Podman",
+          "IaC and configuration management with Terraform and Ansible",
+          "Configuring reverse proxies and web servers with Nginx",
+          "Automating build and deployment pipelines via GitHub Actions"
+        ]
+      },
+      "c": {
+        "usedFor": "5 years",
+        "usage": [
+          "Operating systems development: extending the MINIX kernel",
+          "Creating a custom Hyprland (a Wayland compositor) plugin",
+          "Extending Godot games with C++"
+        ]
       }
     }
   },

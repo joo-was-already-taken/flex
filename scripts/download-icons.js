@@ -7,6 +7,7 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
 const PROJECTS_PATH = path.join(__dirname, '../src/data/projects.json')
+const SKILLS_PATH = path.join(__dirname, '../src/data/skills.json')
 const ICONS_DIR = path.join(__dirname, '../public/icons/tech')
 
 if (!fs.existsSync(ICONS_DIR)) {
@@ -35,7 +36,11 @@ const download = (url, dest) => {
 
 async function main() {
   const projects = JSON.parse(fs.readFileSync(PROJECTS_PATH, 'utf8'))
-  const slugs = [...new Set(projects.flatMap((p) => p.techSlugs || []))]
+  const skills = JSON.parse(fs.readFileSync(SKILLS_PATH, 'utf8'))
+
+  const projectSlugs = projects.flatMap((p) => p.techSlugs || [])
+  const skillSlugs = skills.map((s) => s.slug).filter(Boolean)
+  const slugs = [...new Set([...projectSlugs, ...skillSlugs])]
 
   console.log(`Syncing icons for: ${slugs.join(', ')}`)
 
