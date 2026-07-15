@@ -17,13 +17,28 @@ body {
   color: rgb(var(--foreground-rgb));
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  margin-top: var(--navbar-height);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(var(--foreground-rgb), 0.3);
+  border-radius: 7px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(var(--foreground-rgb), 0.5);
+}
+
 button,
 input,
 select,
 textarea {
   font-family: inherit;
-}
-
-* {
-  scrollbar-color: rgba(var(--foreground-rgb), 0.3) rgb(var(--background-rgb));
 }
