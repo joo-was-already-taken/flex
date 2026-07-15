@@ -26,7 +26,16 @@ export default function Glass({ children, className = '' }: GlassProps) {
       updatePosition(e.clientX, e.clientY)
     }
 
+    const handleScroll = () => {
+      // @ts-expect-error: Custom window property
+      const lastPos = window._lastMousePos
+      if (lastPos) {
+        updatePosition(lastPos.x, lastPos.y)
+      }
+    }
+
     window.addEventListener('mousemove', handleMouseMove)
+    window.addEventListener('scroll', handleScroll, { capture: true, passive: true })
 
     let frameId: number
     const startTime = Date.now()
@@ -61,6 +70,7 @@ export default function Glass({ children, className = '' }: GlassProps) {
 
     return () => {
       window.removeEventListener('mousemove', handleMouseMove)
+      window.removeEventListener('scroll', handleScroll, { capture: true })
       cancelAnimationFrame(frameId)
     }
   }, [])
