@@ -10,13 +10,6 @@
   margin: 0 auto;
   overflow-y: auto;
   box-sizing: border-box;
-
-  /* hide scrollbar */
-  &::-webkit-scrollbar {
-    display: none;
-  }
-  -ms-overflow-style: none;
-  scrollbar-width: none;
 }
 
 .generalDescription {

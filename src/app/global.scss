@@ -22,3 +22,7 @@ select,
 textarea {
   font-family: inherit;
 }
+
+* {
+  scrollbar-color: rgba(var(--foreground-rgb), 0.3) rgb(var(--background-rgb));
+}
