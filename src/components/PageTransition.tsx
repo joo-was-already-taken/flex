@@ -69,6 +69,10 @@ export default function PageTransition({ children }: { children: ReactNode }) {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
+        WebkitMaskImage:
+          'linear-gradient(to bottom, transparent 0%, transparent 80px, black 150px, black calc(100% - 100px), transparent 100%)',
+        maskImage:
+          'linear-gradient(to bottom, transparent 0%, transparent 80px, black 150px, black calc(100% - 100px), transparent 100%)',
       }}
     >
       <AnimatePresence mode="popLayout" custom={state.direction} initial={false}>
