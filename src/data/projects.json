@@ -7,6 +7,13 @@
     "link": "https://github.com/joo-was-already-taken/pomidoro"
   },
   {
+    "id": "herdr-navigator.nvim",
+    "title": "herdr-navigator.nvim",
+    "techNames": ["Neovim", "Rust", "Lua", "Nix"],
+    "techSlugs": ["neovim", "rust", "lua", "nixos"],
+    "link": "https://github.com/joo-was-already-taken/herdr-navigator.nvim"
+  },
+  {
     "id": "nix-from-zon",
     "title": "nix-from-zon",
     "techNames": ["Nix"],
@@ -30,8 +37,8 @@
   {
     "id": "neovim-penultimum",
     "title": "Neovim Config",
-    "techNames": ["Lua", "Nix"],
-    "techSlugs": ["lua", "nixos"],
+    "techNames": ["Neovim", "Lua", "Nix"],
+    "techSlugs": ["neovim", "lua", "nixos"],
     "link": "https://github.com/joo-was-already-taken/neovim-penultimum"
   }
 ]

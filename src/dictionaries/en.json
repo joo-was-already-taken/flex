@@ -21,6 +21,10 @@
         "title": "Pomidoro",
         "description": "An extensible pomodoro timer with client-server architecture."
       },
+      "herdr-navigator.nvim": {
+        "title": "herdr-navigator.nvim",
+        "description": "A Neovim plugin for navigating splits and Herdr panes"
+      },
       "nix-from-zon": {
         "title": "nix-from-zon",
         "description": "A Nix library that parses Zig Object Notation (ZON) into native Nix data structures."
@@ -86,7 +90,6 @@
         "usedFor": "1.5 year",
         "usage": [
           "Backend REST APIs for university projects",
-          "Object-Oriented Programming",
           "Database integrations"
         ]
       },
@@ -112,7 +115,8 @@
         "usage": [
           "Operating systems development: extending the MINIX kernel",
           "Creating a custom Hyprland (a Wayland compositor) plugin",
-          "Extending Godot games with C++"
+          "Writing Godot extensions with C++",
+          "Build tools: CMake, GNU Make"
         ]
       }
     }
