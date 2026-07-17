@@ -10,7 +10,7 @@ export default async function SkillsPage({ params }: { params: Promise<{ lang: s
   return (
     <main className={styles.container}>
       <div className={styles.masonryGrid}>
-        {skillsData.map((skill, idx) => {
+        {skillsData.main.map((skill, idx) => {
           type SkillItem = { usedFor?: string; usage?: string | string[] }
           const itemsDict = (dict.skills as { items: Record<string, SkillItem> }).items
           const itemDict = itemsDict[skill.slug] || {}
@@ -46,6 +46,21 @@ export default async function SkillsPage({ params }: { params: Promise<{ lang: s
             </Glass>
           )
         })}
+      </div>
+
+      <div className={styles.otherTechContainer}>
+        <Glass className={styles.otherTechCard}>
+          <h3>{dict.skills?.otherTitle || 'Other Technologies'}</h3>
+          <p>
+            {dict.skills?.otherDescription ||
+              "Technologies I've had contact with at university or otherwise:"}
+          </p>
+          <ul className={styles.techList}>
+            {skillsData.other.map((tech: string, idx: number) => (
+              <li key={idx}>{tech}</li>
+            ))}
+          </ul>
+        </Glass>
       </div>
     </main>
   )

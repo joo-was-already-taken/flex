@@ -58,7 +58,8 @@
       "python": {
         "usedFor": "7 years",
         "usage": [
-          "From Turtle graphics through automation scripting to Django applications and AI microservices"
+          "From Turtle graphics through automation scripting to Django applications and AI microservices",
+          "Configuration systems: Pyproject, Uv"
         ]
       },
       "nixos": {
@@ -118,8 +119,18 @@
           "Writing Godot extensions with C++",
           "Build tools: CMake, GNU Make"
         ]
+      },
+      "sql": {
+        "usedFor": "4 years",
+        "usage": [
+          "Microsoft Access SQL in highschool",
+          "PL/SQL at university",
+          "SQLite at university and for personal projects"
+        ]
       }
-    }
+    },
+    "otherTitle": "Other",
+    "otherDescription": "Technologies I've had contact with at university or otherwise."
   },
   "contact": {
     "title": "Let's connect",

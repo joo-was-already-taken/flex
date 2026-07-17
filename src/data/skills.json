@@ -1,47 +1,66 @@
-[
-  {
-    "name": "Linux",
-    "slug": "linux",
-    "level": "experienced"
-  },
-  {
-    "name": "Python",
-    "slug": "python",
-    "level": "experienced"
-  },
-  {
-    "name": "Nix",
-    "slug": "nixos",
-    "level": "intermediate"
-  },
-  {
-    "name": "Bash",
-    "slug": "bash",
-    "level": "intermediate"
-  },
-  {
-    "name": "Frontend",
-    "slug": "javascript",
-    "level": "intermediate"
-  },
-  {
-    "name": "Java & Spring Boot",
-    "slug": "spring",
-    "level": "beginner"
-  },
-  {
-    "name": "Rust",
-    "slug": "rust",
-    "level": "intermediate"
-  },
-  {
-    "name": "DevOps & CI/CD",
-    "slug": "docker",
-    "level": "intermediate"
-  },
-  {
-    "name": "C/C++",
-    "slug": "c",
-    "level": "intermediate"
-  }
-]
+{
+  "main": [
+    {
+      "name": "Linux",
+      "slug": "linux",
+      "level": "experienced"
+    },
+    {
+      "name": "Python",
+      "slug": "python",
+      "level": "experienced"
+    },
+    {
+      "name": "Nix",
+      "slug": "nixos",
+      "level": "intermediate"
+    },
+    {
+      "name": "Bash",
+      "slug": "bash",
+      "level": "intermediate"
+    },
+    {
+      "name": "Frontend",
+      "slug": "javascript",
+      "level": "intermediate"
+    },
+    {
+      "name": "Java & Spring Boot",
+      "slug": "spring",
+      "level": "beginner"
+    },
+    {
+      "name": "Rust",
+      "slug": "rust",
+      "level": "intermediate"
+    },
+    {
+      "name": "DevOps & CI/CD",
+      "slug": "docker",
+      "level": "intermediate"
+    },
+    {
+      "name": "C/C++",
+      "slug": "c",
+      "level": "intermediate"
+    },
+    {
+      "name": "SQL",
+      "slug": "sql",
+      "level": "intermediate"
+    }
+  ],
+  "other": [
+    "Assembly (x86, x86_64, RISC-V)",
+    "Haskell",
+    "Prolog",
+    "LaTeX",
+    "Typst",
+    "Lua",
+    "Go",
+    "Zig",
+    "Lisp",
+    "MATLAB"
+  ]
+}
