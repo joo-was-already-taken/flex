@@ -11,7 +11,7 @@
   "about": {
     "title": "Witaj Świecie!",
     "description": "Jestem studentem Informatyki na Politechnice Warszawskiej.",
-    "interests": "Interesuję się DevOps, narzędziami systemowymi i projektowaniem systemów operacyjnych."
+    "interests": "Interesuję się DevOps-em, narzędziami systemowymi i systemami operacyjnymi."
   },
   "projects": {
     "description": "Oto kilka moich projektów, które tworzyłem w wolnym czasie.",
@@ -20,6 +20,10 @@
       "pomidoro": {
         "title": "Pomidoro",
         "description": "Łatwo rozszerzalny timer pomodoro z architekturą klient-serwer."
+      },
+      "herdr-navigator.nvim": {
+        "title": "herdr-navigator.nvim",
+        "description": "Plugin do Neovima do nawigacji między oknami Neovima i Herdr-a"
       },
       "nix-from-zon": {
         "title": "nix-from-zon",
@@ -35,12 +39,97 @@
       },
       "neovim-penultimum": {
         "title": "Konfiguracja Neovima",
-        "description": "Moja osobista konfiguracja Neovima z modułem Home Manager-a."
+        "description": "Moja konfiguracja Neovima z modułem Home Manager."
       }
     }
   },
-  "contact": {
-    "title": "Bądźmy w kontakcie",
-    "description": "Napisz pisz do mnie maila."
+  "skills": {
+    "title": "Umiejętności",
+    "items": {
+      "linux": {
+        "usedFor": "5 lat",
+        "usage": [
+          "Daily driver przez 5 lat: Linux Mint -> Manjaro -> NixOS",
+          "Development: Alpine do konteneryzacji, Arch w Distrobox-ie jako prosty shell do programowania",
+          "Uczelnia: Ubuntu Server, Alpine, OpenWrt, Buildroot",
+          "Moje urządzenia: lokalny serwer na Raspberry Pi (NixOS) i PC (Bazzite)"
+        ]
+      },
+      "python": {
+        "usedFor": "7 lat",
+        "usage": [
+          "Od grafiki w Turtle, przez skrypty do automatyzacji, po aplikacje w Django i mikroserwisy AI",
+          "Systemy konfiguracyjne: Pyproject, Uv"
+        ]
+      },
+      "nixos": {
+        "usedFor": "2.5 roku",
+        "usage": [
+          "NixOS z Home Managerem jako daily driver przez 2 lata",
+          "flake.nix do środowisk programistycznych i budowania pakietów"
+        ]
+      },
+      "bash": {
+        "usedFor": "4 lata",
+        "usage": [
+          "Skrypty",
+          "Automatyzacja",
+          "Powłoka użytkownika i do programowania (również Zsh)",
+          "Ogólne zadania: zmiana nazw plików za pomocą wzorca czy szybka arytmetyka"
+        ]
+      },
+      "javascript": {
+        "usedFor": "2 lata",
+        "usage": [
+          "Frameworki: Next.js, React",
+          "Języki: TypeScript, JavaScript, HTML, SCSS, Tailwind CSS",
+          "Elementy graficzne: WebGL, Framer Motion",
+          "Narzędzia: pnpm, ESLint"
+        ]
+      },
+      "spring": {
+        "usedFor": "1.5 roku",
+        "usage": [
+          "REST API dla projektów uniwersyteckich",
+          "Integracje z bazami danych"
+        ]
+      },
+      "rust": {
+        "usedFor": "3 lata",
+        "usage": [
+          "Narzędzia CLI (np. Pomidoro)",
+          "Tokio dla asynchronicznego runtime-u",
+          "Parsowanie i serializacja danych za pomocą Serde"
+        ]
+      },
+      "docker": {
+        "usedFor": "2.5 roku",
+        "usage": [
+          "Orkiestracja kontenerów i wirtualizacja z Kubernetes i Podmanem",
+          "IaC i zarządzanie konfiguracją za pomocą Terraform i Ansible",
+          "Konfiguracja reverse proxy i serwerów webowych za pomocą Nginx",
+          "Automatyzacja potoków budowania i wdrażanie za pomocą GitHub Actions"
+        ]
+      },
+      "c": {
+        "usedFor": "5 lat",
+        "usage": [
+          "Systemy operacyjne: modyfikacja jądra MINIX-a",
+          "Tworzenie własnego plugina do Hyprland-a (kompozytora Wayland)",
+          "Rozszerzenia do Godota w C++",
+          "Narzędzia do budowania: CMake, GNU Make"
+        ]
+      },
+      "sql": {
+        "usedFor": "4 lata",
+        "usage": [
+          "Microsoft Access SQL w liceum",
+          "PL/SQL na uczelni",
+          "SQLite na uczelni i do własnych projektów"
+        ]
+      }
+    },
+    "otherTitle": "Inne",
+    "otherDescription": "Technologie, z którymi miałem styczność na uczelni lub poza."
   }
 }
