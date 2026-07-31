@@ -25,6 +25,10 @@
         "title": "herdr-navigator.nvim",
         "description": "Plugin do Neovima do nawigacji między oknami Neovima i Herdr-a"
       },
+      "dds-intercom": {
+        "title": "DDS Audio Intercom",
+        "description": "Mały projekt do nauki DDS"
+      },
       "nix-from-zon": {
         "title": "nix-from-zon",
         "description": "Biblioteka do Nix-a parsująca Zig Object Notation (ZON) do natywnych struktur danych dostępnych w Nix-ie."

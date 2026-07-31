@@ -14,6 +14,13 @@
     "link": "https://github.com/joo-was-already-taken/herdr-navigator.nvim"
   },
   {
+    "id": "dds-intercom",
+    "title": "DDS Audio Intercom",
+    "techNames": ["C++", "CMake", "Nix"],
+    "techSlugs": ["cplusplus", "cmake", "nixos"],
+    "link": "https://github.com/joo-was-already-taken/dds-intercom"
+  },
+  {
     "id": "nix-from-zon",
     "title": "nix-from-zon",
     "techNames": ["Nix"],

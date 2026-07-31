@@ -25,6 +25,10 @@
         "title": "herdr-navigator.nvim",
         "description": "A Neovim plugin for navigating splits and Herdr panes"
       },
+      "dds-intercom": {
+        "title": "DDS Audio Intercom",
+        "description": "DDS learning excerise"
+      },
       "nix-from-zon": {
         "title": "nix-from-zon",
         "description": "A Nix library that parses Zig Object Notation (ZON) into native Nix data structures."
