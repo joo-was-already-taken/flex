@@ -36,7 +36,7 @@ const download = (url, dest) => {
 
 async function main() {
   const projects = JSON.parse(fs.readFileSync(PROJECTS_PATH, 'utf8'))
-  const skills = JSON.parse(fs.readFileSync(SKILLS_PATH, 'utf8'))
+  const { main: skills } = JSON.parse(fs.readFileSync(SKILLS_PATH, 'utf8'))
 
   const projectSlugs = projects.flatMap((p) => p.techSlugs || [])
   const skillSlugs = skills.map((s) => s.slug).filter(Boolean)
