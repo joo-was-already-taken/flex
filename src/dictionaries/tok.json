@@ -14,7 +14,6 @@
     "view_source": "lukin e nasin ilo →",
     "items": {
       "nix-from-zon": {
-        "title": "nix-from-zon",
         "description": "ilo Nix li ante e sitelen ZON tawa sitelen Nix."
       },
       "nixos-config": {

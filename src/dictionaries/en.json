@@ -18,26 +18,21 @@
     "view_source": "View source code →",
     "items": {
       "pomidoro": {
-        "title": "Pomidoro",
         "description": "An extensible pomodoro timer with client-server architecture."
       },
       "herdr-navigator.nvim": {
-        "title": "herdr-navigator.nvim",
         "description": "A Neovim plugin for navigating splits and Herdr panes"
       },
       "hypr-wsgroups": {
         "description": "A Hyprland (window manager) plugin that groups related workspaces together for a more organized workflow"
       },
       "dds-intercom": {
-        "title": "DDS Audio Intercom",
         "description": "DDS learning excerise"
       },
       "nix-from-zon": {
-        "title": "nix-from-zon",
         "description": "A Nix library that parses Zig Object Notation (ZON) into native Nix data structures."
       },
       "nixos-config": {
-        "title": "NixOS Config",
         "description": "A NixOS configuration I've been using on my laptop for about 20 months."
       },
       "flex": {

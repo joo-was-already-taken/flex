@@ -3,6 +3,11 @@ import Glass from '../../../components/Glass'
 import projectsData from '../../../data/projects.json'
 import { getDictionary, Locale } from '../../../get-dictionary'
 
+type ProjectDict = {
+  title?: string
+  description: string
+}
+
 export default async function ProjectsPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params
   const dict = await getDictionary(lang as Locale)
@@ -11,7 +16,8 @@ export default async function ProjectsPage({ params }: { params: Promise<{ lang:
     <main className={styles.container}>
       <p className={styles.generalDescription}>{dict.projects.description}</p>
       {projectsData.map((project) => {
-        const itemDict = dict.projects.items[project.id as keyof typeof dict.projects.items]
+        const projectDicts: Record<string, ProjectDict> = dict.projects.items
+        const itemDict = projectDicts[project.id]
         const title = itemDict?.title || project.title
         const description = itemDict?.description
 
