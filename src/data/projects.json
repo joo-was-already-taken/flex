@@ -14,18 +14,18 @@
     "link": "https://github.com/joo-was-already-taken/herdr-navigator.nvim"
   },
   {
+    "id": "hypr-wsgroups",
+    "title": "hypr-wsgroups",
+    "techNames": ["Hyprland", "C++", "CMake", "Nix"],
+    "techSlugs": ["hyprland", "cplusplus", "cmake", "nixos"],
+    "link": "https://github.com/joo-was-already-taken/hypr-wsgroups"
+  },
+  {
     "id": "dds-intercom",
     "title": "DDS Audio Intercom",
     "techNames": ["C++", "CMake", "Nix"],
     "techSlugs": ["cplusplus", "cmake", "nixos"],
     "link": "https://github.com/joo-was-already-taken/dds-intercom"
-  },
-  {
-    "id": "nix-from-zon",
-    "title": "nix-from-zon",
-    "techNames": ["Nix"],
-    "techSlugs": ["nixos"],
-    "link": "https://github.com/joo-was-already-taken/nix-from-zon"
   },
   {
     "id": "nixos-config",
@@ -40,6 +40,13 @@
     "techNames": ["Next.js", "WebGL", "Sass"],
     "techSlugs": ["nextjs", "webgl", "sass"],
     "link": "https://github.com/joo-was-already-taken/flex"
+  },
+  {
+    "id": "nix-from-zon",
+    "title": "nix-from-zon",
+    "techNames": ["Nix"],
+    "techSlugs": ["nixos"],
+    "link": "https://github.com/joo-was-already-taken/nix-from-zon"
   },
   {
     "id": "neovim-penultimum",

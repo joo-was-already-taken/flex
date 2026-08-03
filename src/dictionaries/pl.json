@@ -25,6 +25,9 @@
         "title": "herdr-navigator.nvim",
         "description": "Plugin do Neovima do nawigacji między oknami Neovima i Herdr-a"
       },
+      "hypr-wsgroups": {
+        "description": "Plugin do Hyprland'a (window manager) do grupowania powiązanych workspace-ów"
+      },
       "dds-intercom": {
         "title": "DDS Audio Intercom",
         "description": "Mały projekt do nauki DDS"

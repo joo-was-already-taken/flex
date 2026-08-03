@@ -25,6 +25,9 @@
         "title": "herdr-navigator.nvim",
         "description": "A Neovim plugin for navigating splits and Herdr panes"
       },
+      "hypr-wsgroups": {
+        "description": "A Hyprland (window manager) plugin that groups related workspaces together for a more organized workflow"
+      },
       "dds-intercom": {
         "title": "DDS Audio Intercom",
         "description": "DDS learning excerise"
