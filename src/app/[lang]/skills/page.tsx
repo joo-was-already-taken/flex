@@ -4,6 +4,8 @@ import Glass from '../../../components/Glass'
 import skillsData from '../../../data/skills.json'
 import { getDictionary, Locale } from '../../../get-dictionary'
 
+type SkillItem = { usedFor?: string; usage?: string | string[] }
+
 export default async function SkillsPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params
   const dict = await getDictionary(lang as Locale)
@@ -12,7 +14,6 @@ export default async function SkillsPage({ params }: { params: Promise<{ lang: s
     <main className={styles.container}>
       <div className={styles.masonryGrid}>
         {skillsData.main.map((skill, idx) => {
-          type SkillItem = { usedFor?: string; usage?: string | string[] }
           const itemsDict = (dict.skills as { items: Record<string, SkillItem> }).items
           const itemDict = itemsDict[skill.slug] || {}
 
