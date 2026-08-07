@@ -27,7 +27,6 @@ export default function Glass({ children, className = '' }: GlassProps) {
     }
 
     const handleScroll = () => {
-      // @ts-expect-error: Custom window property
       const lastPos = window._lastMousePos
       if (lastPos) {
         updatePosition(lastPos.x, lastPos.y)
@@ -40,7 +39,6 @@ export default function Glass({ children, className = '' }: GlassProps) {
     let frameId: number
     const startTime = Date.now()
     const syncDuringTransition = () => {
-      // @ts-expect-error: Custom window property from Navbar
       let lastPos = window._lastMousePos
 
       // best effort: fallback to session storage if window memory is wiped

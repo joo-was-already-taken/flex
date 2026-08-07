@@ -54,7 +54,6 @@ export default function Navbar({
     try {
       const saved = sessionStorage.getItem('_lastMousePos')
       if (saved) {
-        // @ts-expect-error: Custom window property
         window._lastMousePos = JSON.parse(saved)
       }
     } catch (e) {
@@ -63,7 +62,6 @@ export default function Navbar({
 
     const handleMouseMove = (e: MouseEvent) => {
       const pos = { x: e.clientX, y: e.clientY }
-      // @ts-expect-error: Custom window property
       window._lastMousePos = pos
 
       sessionStorage.setItem('_lastMousePos', JSON.stringify(pos))
