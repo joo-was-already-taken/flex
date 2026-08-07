@@ -1,0 +1,48 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  $fade-mask: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent var(--navbar-height),
+    black calc(var(--navbar-height) + 70px),
+    black calc(100% - 100px),
+    transparent 100%
+  );
+  $scrollbar-mask: linear-gradient(to bottom, black, black);
+
+  -webkit-mask-image: $fade-mask, $scrollbar-mask;
+  -webkit-mask-size:
+    calc(100% - 20px) 100%,
+    20px 100%;
+  -webkit-mask-position:
+    left top,
+    right top;
+  -webkit-mask-repeat: no-repeat, no-repeat;
+  mask-image: $fade-mask, $scrollbar-mask;
+  mask-size:
+    calc(100% - 20px) 100%,
+    20px 100%;
+  mask-position:
+    left top,
+    right top;
+  mask-repeat: no-repeat, no-repeat;
+}
+
+.page {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

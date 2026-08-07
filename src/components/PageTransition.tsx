@@ -3,6 +3,7 @@
 import { usePathname } from 'next/navigation'
 import { ReactNode, useState, useRef, useContext } from 'react'
 import { AnimatePresence, motion, Variants } from 'framer-motion'
+import styles from './PageTransition.module.scss'
 import { LayoutRouterContext } from 'next/dist/shared/lib/app-router-context.shared-runtime'
 
 const ROUTES = ['/home', '/projects', '/skills', '/contact']
@@ -59,26 +60,7 @@ export default function PageTransition({ children }: { children: ReactNode }) {
   }
 
   return (
-    <div
-      style={{
-        position: 'relative',
-        width: '100%',
-        height: '100%',
-        overflow: 'hidden',
-        flex: 1,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, transparent var(--navbar-height), black calc(var(--navbar-height) + 70px), black calc(100% - 100px), transparent 100%), linear-gradient(to bottom, black, black)',
-        WebkitMaskSize: 'calc(100% - 20px) 100%, 20px 100%',
-        WebkitMaskPosition: 'left top, right top',
-        WebkitMaskRepeat: 'no-repeat, no-repeat',
-        maskImage: 'linear-gradient(to bottom, transparent 0%, transparent var(--navbar-height), black calc(var(--navbar-height) + 70px), black calc(100% - 100px), transparent 100%), linear-gradient(to bottom, black, black)',
-        maskSize: 'calc(100% - 20px) 100%, 20px 100%',
-        maskPosition: 'left top, right top',
-        maskRepeat: 'no-repeat, no-repeat',
-      }}
-    >
+    <div className={styles.container}>
       <AnimatePresence mode="popLayout" custom={state.direction} initial={false}>
         <motion.div
           key={pathname}
@@ -87,16 +69,7 @@ export default function PageTransition({ children }: { children: ReactNode }) {
           initial="initial"
           animate="animate"
           exit="exit"
-          style={{
-            width: '100%',
-            height: '100%',
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
+          className={styles.page}
         >
           <FrozenRouter>{children}</FrozenRouter>
         </motion.div>
