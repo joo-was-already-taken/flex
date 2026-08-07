@@ -1,4 +1,5 @@
 import styles from './TechMarquee.module.scss'
+import { basePath } from '../lib/basePath'
 
 const ICONS = [
   'linux',
@@ -16,8 +17,6 @@ const ICONS = [
 ]
 
 export default function TechMarquee() {
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
-
   return (
     <div className={styles.marqueeContainer}>
       <div className={styles.marqueeContent}>

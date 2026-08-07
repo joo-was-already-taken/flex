@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import { basePath } from '../lib/basePath'
 import { usePathname, useRouter } from 'next/navigation'
 import { ReactNode, useEffect } from 'react'
 import styles from './Navbar.module.scss'
@@ -48,8 +49,6 @@ export default function Navbar({
     segments[1] = newLang
     router.push(segments.join('/'))
   }
-
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
   useEffect(() => {
     try {

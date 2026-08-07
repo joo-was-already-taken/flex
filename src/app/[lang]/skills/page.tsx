@@ -1,4 +1,5 @@
 import styles from './skills.module.scss'
+import { basePath } from '../../../lib/basePath'
 import Glass from '../../../components/Glass'
 import skillsData from '../../../data/skills.json'
 import { getDictionary, Locale } from '../../../get-dictionary'
@@ -14,7 +15,6 @@ export default async function SkillsPage({ params }: { params: Promise<{ lang: s
           type SkillItem = { usedFor?: string; usage?: string | string[] }
           const itemsDict = (dict.skills as { items: Record<string, SkillItem> }).items
           const itemDict = itemsDict[skill.slug] || {}
-          const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
           return (
             <Glass key={idx} className={styles.skillsCard}>

@@ -1,4 +1,5 @@
 import styles from './projects.module.scss'
+import { basePath } from '../../../lib/basePath'
 import Glass from '../../../components/Glass'
 import projectsData from '../../../data/projects.json'
 import { getDictionary, Locale } from '../../../get-dictionary'
@@ -23,10 +24,9 @@ export default async function ProjectsPage({ params }: { params: Promise<{ lang:
 
         return (
           <Glass key={project.id} className={styles.projectCard}>
-            <h1>{title}</h1>
+            <h2>{title}</h2>
             <div className={styles.techStack}>
               {project.techSlugs?.map((slug, idx) => {
-                const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
                 return (
                   <span key={`${slug}-${idx}`} className={styles.techItem}>
                     <img
