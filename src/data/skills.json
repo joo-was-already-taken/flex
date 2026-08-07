@@ -51,6 +51,20 @@
       "level": "intermediate"
     }
   ],
+  "marquee": [
+    "linux",
+    "python",
+    "nixos",
+    "bash",
+    "javascript",
+    "rust",
+    "docker",
+    "c",
+    "sql",
+    "neovim",
+    "nextjs",
+    "webgl"
+  ],
   "other": [
     "Assembly (x86, x86_64, RISC-V)",
     "Haskell",
