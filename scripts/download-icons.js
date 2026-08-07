@@ -1,7 +1,7 @@
-import fs from 'fs'
-import path from 'path'
-import https from 'https'
-import { fileURLToPath } from 'url'
+import { writeFile, mkdir, readFile } from 'node:fs/promises'
+import { existsSync } from 'node:fs'
+import * as path from 'node:path'
+import { fileURLToPath } from 'node:url'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -10,33 +10,19 @@ const PROJECTS_PATH = path.join(__dirname, '../src/data/projects.json')
 const SKILLS_PATH = path.join(__dirname, '../src/data/skills.json')
 const ICONS_DIR = path.join(__dirname, '../public/icons/tech')
 
-if (!fs.existsSync(ICONS_DIR)) {
-  fs.mkdirSync(ICONS_DIR, { recursive: true })
+if (!existsSync(ICONS_DIR)) {
+  await mkdir(ICONS_DIR, { recursive: true })
 }
 
-const download = (url, dest) => {
-  return new Promise((resolve, reject) => {
-    const file = fs.createWriteStream(dest)
-    https
-      .get(url, (response) => {
-        if (response.statusCode !== 200) {
-          reject(new Error(`Failed to get '${url}' (${response.statusCode})`))
-          return
-        }
-        response.pipe(file)
-        file.on('finish', () => {
-          file.close(resolve)
-        })
-      })
-      .on('error', (err) => {
-        fs.unlink(dest, () => reject(err))
-      })
-  })
+async function download(url, dest) {
+  const res = await fetch(url)
+  if (!res.ok) throw new Error(`Failed to get '${url}' (${res.status})`)
+  await writeFile(dest, Buffer.from(await res.arrayBuffer()))
 }
 
 async function main() {
-  const projects = JSON.parse(fs.readFileSync(PROJECTS_PATH, 'utf8'))
-  const { main: skills } = JSON.parse(fs.readFileSync(SKILLS_PATH, 'utf8'))
+  const projects = JSON.parse(await readFile(PROJECTS_PATH, 'utf8'))
+  const { main: skills } = JSON.parse(await readFile(SKILLS_PATH, 'utf8'))
 
   const projectSlugs = projects.flatMap((p) => p.techSlugs || [])
   const skillSlugs = skills.map((s) => s.slug).filter(Boolean)
@@ -46,7 +32,7 @@ async function main() {
 
   for (const slug of slugs) {
     const dest = path.join(ICONS_DIR, `${slug}.svg`)
-    if (fs.existsSync(dest)) {
+    if (existsSync(dest)) {
       console.log(`- ${slug}.svg already exists`)
       continue
     }
@@ -60,7 +46,7 @@ async function main() {
       try {
         await download(fallbackUrl, dest)
         console.log(`Downloaded ${slug}.svg (plain)`)
-      } catch (err2) {
+      } catch {
         console.error(`Final failure for ${slug}`)
       }
     }
