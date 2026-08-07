@@ -16,9 +16,5 @@ export default function RootRedirect() {
     router.replace(`/${preferredLang}/home`)
   })
 
-  return (
-    <div style={{ height: '100vh', backgroundColor: '#000' }}>
-      {/* black screen while redirecting */}
-    </div>
-  )
+  return <div style={{ height: '100vh' }}>{/* black screen while redirecting */}</div>
 }
