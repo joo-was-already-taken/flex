@@ -1,3 +1,5 @@
+import fs from 'fs'
+import path from 'path'
 import localFont from 'next/font/local'
 import Navbar from '../../components/Navbar'
 import StarBackground from '../../components/StarBackground'
@@ -36,7 +38,11 @@ export async function generateMetadata({
 }
 
 export async function generateStaticParams() {
-  return [{ lang: 'en' }, { lang: 'pl' }, { lang: 'de' }, { lang: 'tok' }]
+  const dir = path.join(process.cwd(), 'src/dictionaries')
+  return fs
+    .readdirSync(dir)
+    .filter((f) => f.endsWith('.json'))
+    .map((f) => ({ lang: f.replace('.json', '') }))
 }
 
 export default async function RootLayout({
