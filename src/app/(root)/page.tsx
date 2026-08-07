@@ -14,7 +14,7 @@ export default function RootRedirect() {
     else if (browserLang.startsWith('de')) preferredLang = 'de'
 
     router.replace(`/${preferredLang}/home`)
-  }, [router])
+  })
 
   return (
     <div style={{ height: '100vh', backgroundColor: '#000' }}>
