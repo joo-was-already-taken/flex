@@ -6,10 +6,14 @@ import styles from './CopyButton.module.scss'
 export default function CopyButton({ textToCopy }: { textToCopy: string }) {
   const [copied, setCopied] = useState(false)
 
-  const handleCopy = () => {
-    navigator.clipboard.writeText(textToCopy)
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(textToCopy)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    } catch {
+      // clipboard access denied — don't show the success state
+    }
   }
 
   return (
